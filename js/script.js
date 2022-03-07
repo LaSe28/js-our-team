@@ -95,7 +95,7 @@ function addedNewMember(){
     message.style.textAlign = 'center'
     message.style.fontSize = '2rem'
     message.innerHTML = `${inputName.value} <br> è stato aggiunto al Team!`
-    containerAlert.append(message) 
+    containerAlert.prepend(message) 
     setTimeout (hideMessage, 5000)
     function hideMessage(){
         message.style.display = 'none'
