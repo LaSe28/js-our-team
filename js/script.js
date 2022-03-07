@@ -43,10 +43,7 @@ for (let i = 0; i < arrTeam.length; i++){
         card =  
         `<div class="team-card">
             <div class="card-image">
-                <img
-                    src="${arrTeam[i]['photo']}"
-                    alt="${arrTeam[i]['name']}"
-                />
+                <img src="${arrTeam[i]['photo']}"alt="${arrTeam[i]['name']}"/>
             </div>
             <div class="card-text">
                 <h3>${arrTeam[i]['name']}</h3>
@@ -71,10 +68,7 @@ btnAdd.addEventListener('click', function(){
             card =  
             `<div class="team-card">
                 <div class="card-image">
-                    <img
-                        src="${arrTeam[i]['photo']}"
-                        alt="${arrTeam[i]['name']}"
-                    />
+                    <img src="${arrTeam[i]['photo']}"alt="${arrTeam[i]['name']}"/>
                 </div>
                 <div class="card-text">
                     <h3>${arrTeam[i]['name']}</h3>
