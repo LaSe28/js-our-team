@@ -4,7 +4,7 @@ let inputName = document.querySelector('#name')
 let inputRole = document.querySelector('#role')
 let inputImage = document.querySelector('#image')
 let btnAdd = document.querySelector('#addMemberButton')
-let containerAlert = document.querySelector('#add-member')
+let containerAlert = document.querySelector('html')
 
 let arrTeam = [
     {
@@ -85,9 +85,13 @@ btnAdd.addEventListener('click', function(){
 
 function addedNewMember(){
     let message = document.createElement("div")
-    message.style.height = '200px'
     message.style.width = '400px'
-    message.style.backgroundColor = 'white'
+    message.style.position = 'fixed'
+    message.style.top = '4rem'
+    message.style.left = '50%'
+    message.style.transform = 'translateX(-50%)'
+    message.style.zIndex = '5'
+    message.style.backgroundColor = 'rgba(200, 200, 200, 0.8)'
     message.style.borderRadius = '1rem'
     message.style.margin = 'auto'
     message.style.textAlign = 'center'
