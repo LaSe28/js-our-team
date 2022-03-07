@@ -1,5 +1,9 @@
 let container = document.querySelector('.team-container')
-let card;  
+let card;
+let inputName = document.querySelector('#name')
+let inputRole = document.querySelector('#role')
+let inputImage = document.querySelector('#image')
+let btnAdd = document.querySelector('#addMemberButton')
 
 let arrTeam = [
     {
@@ -54,6 +58,33 @@ for (let i = 0; i < arrTeam.length; i++){
 }
 
 
+btnAdd.addEventListener('click', function(){
+    container.innerHTML = ''
+    let newMember = {
+        name : inputName.value,
+        profession : inputRole.value,
+        photo : inputImage.value,
+    }
+    arrTeam.push(newMember)
+    for (let i = 0; i < arrTeam.length; i++){
+        for (let kay in arrTeam[i]){
+            card =  
+            `<div class="team-card">
+                <div class="card-image">
+                    <img
+                        src="${arrTeam[i]['photo']}"
+                        alt="${arrTeam[i]['name']}"
+                    />
+                </div>
+                <div class="card-text">
+                    <h3>${arrTeam[i]['name']}</h3>
+                    <p>${arrTeam[i]['profession']}</p>
+                </div>
+            </div>`
+        }
+        container.innerHTML += card
+    }
+})
 
 
 
