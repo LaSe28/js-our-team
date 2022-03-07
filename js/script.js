@@ -4,6 +4,7 @@ let inputName = document.querySelector('#name')
 let inputRole = document.querySelector('#role')
 let inputImage = document.querySelector('#image')
 let btnAdd = document.querySelector('#addMemberButton')
+let containerAlert = document.querySelector('#add-member')
 
 let arrTeam = [
     {
@@ -56,6 +57,7 @@ for (let i = 0; i < arrTeam.length; i++){
 
 
 btnAdd.addEventListener('click', function(){
+    setTimeout (addedNewMember, 1000)
     container.innerHTML = ''
     let newMember = {
         name : inputName.value,
@@ -80,6 +82,25 @@ btnAdd.addEventListener('click', function(){
     }
 })
 
+
+function addedNewMember(){
+    let message = document.createElement("div")
+    message.style.height = '200px'
+    message.style.width = '400px'
+    message.style.backgroundColor = 'white'
+    message.style.borderRadius = '1rem'
+    message.style.margin = 'auto'
+    message.style.position = 'fixed-top'
+    message.style.zIndex = '5'
+    message.style.textAlign = 'center'
+    message.style.fontSize = '2rem'
+    message.innerHTML = `${inputName.value} <br> è stato aggiunto al Team!`
+    containerAlert.append(message) 
+    setTimeout (hideMessage, 5000)
+    function hideMessage(){
+        message.style.display = 'none'
+    }
+}
 
 
 
