@@ -90,8 +90,6 @@ function addedNewMember(){
     message.style.backgroundColor = 'white'
     message.style.borderRadius = '1rem'
     message.style.margin = 'auto'
-    message.style.position = 'fixed-top'
-    message.style.zIndex = '5'
     message.style.textAlign = 'center'
     message.style.fontSize = '2rem'
     message.innerHTML = `${inputName.value} <br> è stato aggiunto al Team!`
