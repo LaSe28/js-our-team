@@ -80,6 +80,8 @@ btnAdd.addEventListener('click', function(){
         }
         container.innerHTML += card
     }
+    
+
 })
 
 
@@ -102,6 +104,9 @@ function addedNewMember(){
     function hideMessage(){
         message.style.display = 'none'
     }
+    inputName.value = ''
+    inputRole.value = ''
+    inputImage.value = ''
 }
 
 
